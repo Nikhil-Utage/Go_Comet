@@ -1,0 +1,237 @@
+.hero-section {
+  position: relative; 
+  background-image: url("https://raw.githubusercontent.com/gocomet-india/frontend-hotel-assignment/main/hero-bg.jpg");
+  background-size: contain;
+  background-position:10%;
+  color: white;
+  text-align: left;
+  padding: 20px 20px 60px 20px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.hero-bg-tint {
+  position: absolute;
+  width: 100%;
+  height: 430px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9); 
+  z-index: 1; 
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  z-index: 2;
+  color: black; 
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.hero-section p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.hero-search-bar {
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.hero-search-input,
+.hero-num-persons-input {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 230px;
+  height: 20px; 
+}
+
+.hero-date-selector {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 200px;
+  height: 20px;
+}
+
+.hero-search-btn {
+  padding: 10px 20px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.hero-search-btn:hover {
+  background-color: #0056b3;
+}
+
+.hero-suggestions-list {
+  position: absolute;
+  top: 100%;
+  left: 20px;
+  width: 15%;
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+.hero-suggestion-item {
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  color: black;
+}
+
+.hero-suggestion-item:hover {
+  background-color: #f0f0f0;
+}
+
+.hero-error {
+  color: red;
+  margin-top: 10px;
+}
+
+.hero-date-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 20%;
+  max-width: 500px;
+}
+
+.hero-date-field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: white;
+}
+
+.hero-date-field input {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-divider {
+  width: 1px;
+  height: 30px;
+  background-color: #ccc;
+  margin: 0 10px;
+}
+
+.hero-icon {
+  font-size: 18px;
+  color: #333;
+}
+
+.hero-num-persons-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-input-icon {
+  font-size: 18px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-search-bar {
+    flex-direction: column;
+  }
+
+  .hero-search-input,
+  .hero-date-input,
+  .hero-num-persons-input {
+    width: 100%;
+  }
+}
+
+.top-suggestion {
+  color: black;
+  background-color: #0A66BB1F;
+}
+
+@media (max-width: 992px) {
+  .hero-section {
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
+    width: 100%;
+  }
+  .hero-content {
+    align-items: center;
+    text-align: center;
+  }
+  .hero-search-bar {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+  .hero-date-selector {
+    width: 100%;
+  }
+  .hero-num-persons-container {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section h1 {
+    font-size: 1.4rem;
+  }
+  .hero-section p {
+    font-size: 0.9rem;
+  }
+  .hero-date-field input {
+    font-size: 12px;
+  }
+  .hero-num-persons-input {
+    font-size: 12px;
+  }
+  .hero-section{
+    width: 190%;
+  }
+}

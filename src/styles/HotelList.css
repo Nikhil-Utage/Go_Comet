@@ -1,0 +1,46 @@
+.hotel-list {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .filters-section {
+    flex: 1;
+    padding-right: 20px;
+  }
+  
+  .hotels-section {
+    flex: 3;
+  }
+  
+  .hotels-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Changed from auto-fit with minmax */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .view-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+
+@media (max-width: 768px) {
+  .hotels-section {
+    width: 190%;
+  }
+  .hotel-list {
+    flex-direction: column;
+    padding: 10px;
+  }
+  .filters-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .hotels-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+  }
+}
